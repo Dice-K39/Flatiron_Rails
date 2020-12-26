@@ -1,0 +1,14 @@
+<h2>Appointments:</h2>
+<div>
+    <label>Doctor: </label>
+    <%= link_to @appointment.doctor_name, doctor_path(@appointment.doctor_id)%>
+</div>
+<div>
+    <label>Patient: </label>
+    <%= link_to @appointment.patient_name, patient_path(@appointment.patient_id) %>
+</div>
+<div>
+    <label>Date: </label>
+    <!-- https://stackoverflow.com/questions/11837171/formatting-a-date-object-to-display-a-human-readable-date has some DateTime formatting methods for Rails -->
+    <%= @appointment.appointment_date_and_time %>
+</div>

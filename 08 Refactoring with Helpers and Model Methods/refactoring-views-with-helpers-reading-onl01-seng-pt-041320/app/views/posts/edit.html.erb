@@ -1,0 +1,12 @@
+<%= form_for(@post) do |f| %>
+  <label><%= last_updated @post %></label>
+  <br>
+  <!--<label><%= @post.updated_at.strftime("Last updated %A, %b %e, at %1:%M %p") %></label>-->
+  <label>Post title:</label><br>
+  <%= f.text_field :title %><br>
+
+  <label>Post Description</label><br>
+  <%= f.text_area :description %><br>
+
+  <%= f.submit %>
+<% end %>
